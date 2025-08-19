@@ -18,6 +18,8 @@ class Post extends Model
         'author_image'
     ];
 
+    protected $with = ['author', 'category'];
+
     public function author(): BelongsTo{
         return $this->belongsTo(User::class);
     }
