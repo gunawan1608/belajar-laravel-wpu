@@ -26,8 +26,9 @@ Route::get('/contact', function () {
 });
 
 Route::get('/posts', function () {
+    $post = Post::get();
     return view('posts', [
-        'title' => 'Article', 'posts' => Post::all()
+        'title' => 'Article', 'posts' => $post
     ]);
 });
 
