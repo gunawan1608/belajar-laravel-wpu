@@ -1,15 +1,10 @@
 @import "tailwindcss";
-@plugin "flowbite/plugin";
-
-@import "flowbite";
-/* Opsional, kalau mau pakai theme bawaan flowbite */
-@import "flowbite/src/themes/default";
+@import './categories.css';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
 @source '../**/*.js';
-@source "../../node_modules/flowbite";
 
 @theme {
     --font-sans: InterVariable, 'Instrument Sans', ui-sans-serif, system-ui, sans-serif,

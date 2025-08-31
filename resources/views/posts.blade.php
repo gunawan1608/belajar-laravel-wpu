@@ -23,7 +23,8 @@
                         </div>
                         <input
                             class="block p-3 pl-10 w-full text-sm text-gray-900 bg-white border border-gray-300 sm:rounded-none sm:rounded-l-lg focus:ring-blue-500 focus:border-blue-50"
-                            placeholder="Search for article" type="search" id="search" name="search" required="">
+                            placeholder="Search for article" type="search" id="search" name="search"
+                            required="">
                     </div>
                     <div>
                         <button type="submit"
@@ -53,7 +54,9 @@
                         <div class="flex items-center space-x-4">
                             <p class="text-gray-500 text-xs">Tags:</p>
                             <a href="/posts?category={{ $post->category->slug }}"
-                                class="bg-gray-200 text-gray-800 text-xs py-1 px-3 rounded-full hover:bg-gray-800 hover:text-white">{{ $post->category->tags }}</a>
+                                class="category-{{ $post->category->slug }} text-xs py-1 px-3 rounded-full">
+                                {{ $post->category->tags }}
+                            </a>
                         </div>
                     </div>
                 </div>

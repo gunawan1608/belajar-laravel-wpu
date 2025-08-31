@@ -1,0 +1,15 @@
+.category-web-design {
+    @apply bg-red-600 text-white hover:bg-red-800 hover:text-white transition-colors duration-200;
+}
+
+.category-ui-ux {
+    @apply bg-amber-800 text-white hover:bg-amber-900 hover:text-white transition-colors duration-200;
+}
+
+.category-machine-learning {
+    @apply bg-gray-500 text-white hover:bg-gray-700 hover:text-white transition-colors duration-200;
+}
+
+.category-data-analyst {
+    @apply bg-yellow-500 text-gray-900 hover:bg-yellow-600 hover:text-gray-900 transition-colors duration-200;
+}
