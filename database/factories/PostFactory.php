@@ -25,8 +25,8 @@ class PostFactory extends Factory
             'category_id' => Category::factory(),
             'slug' => Str::slug(fake()->sentence()),
             'body' => fake()->text(),
-            'image' => fake()->imageUrl(),
-            'author_image' => fake()->imageUrl(),
+            'image' => 'https://i.pinimg.com/736x/a2/9c/90/a29c9094ba13e87ea88f6d95f709839a.jpg',
+            'author_image' => 'https://i.pinimg.com/736x/69/b7/c8/69b7c80deee6a7e78faf5056b3259506.jpg',
             'created_at' => now()
         ];
     }

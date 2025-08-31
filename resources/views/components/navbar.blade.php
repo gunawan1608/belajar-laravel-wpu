@@ -37,7 +37,7 @@
                         <button @click="profileOpen = !profileOpen"
                             class="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-hidden focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                             <span class="sr-only">Open user menu</span>
-                            <img src="https://i.pinimg.com/736x/83/d0/90/83d090cc59508af05ff368da39cee41a.jpg"
+                            <img src="https://i.pinimg.com/736x/ca/d7/9f/cad79fb9494180e0e06961f1f262b955.jpg"
                                 alt="" class="size-8 rounded-full" />
                         </button>
 
@@ -89,7 +89,7 @@
             <div class="flex items-center px-5">
                 <div class="shrink-0">
                     <img class="h-10 w-10 rounded-full"
-                        src="https://i.pinimg.com/736x/83/d0/90/83d090cc59508af05ff368da39cee41a.jpg"
+                        src="https://i.pinimg.com/736x/ca/d7/9f/cad79fb9494180e0e06961f1f262b955.jpg"
                         alt="" />
                 </div>
                 <div class="ml-3">
