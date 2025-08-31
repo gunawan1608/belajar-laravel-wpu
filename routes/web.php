@@ -25,21 +25,21 @@ Route::get('/contact', function () {
     ]);
 });
 
-    Route::get('/posts', function () {
+Route::get('/posts', function () {
+    return view('posts', [
+        'title' => 'Article',
+        'posts' => Post::filter(request(['search', 'category', 'author']))->latest()->paginate(9)->withQueryString()
+    ]);
+});
 
-        return view('posts', [
-            'title' => 'Article', 'posts' => Post::filter(request(['search', 'category', 'author']))->latest()->get()
-        ]);
-    });
-
-Route::get('/posts/{post:slug}', function(Post $post){
+Route::get('/posts/{post:slug}', function (Post $post) {
     return view('post', [
         'title' => 'Article',
         'post' => $post
     ]);
 });
 
-Route::get('/authors/{user:username}', function(User $user){
+Route::get('/authors/{user:username}', function (User $user) {
     // $posts = $user->posts->load('category', 'author');
     return view('posts', [
         'title' => count($user->posts) . ' Articles by ' . $user->name,
@@ -47,7 +47,7 @@ Route::get('/authors/{user:username}', function(User $user){
     ]);
 });
 
-Route::get('/categories/{category:slug}', function(Category $category){
+Route::get('/categories/{category:slug}', function (Category $category) {
     // $post = $category->posts->load('category', 'author');
     return view('posts', [
         'title' => ' Articles in : ' . $category->tags,
@@ -56,5 +56,3 @@ Route::get('/categories/{category:slug}', function(Category $category){
 });
 
 Route::get('/menu', [MenuController::class, 'index']);
-
-

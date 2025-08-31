@@ -68,14 +68,8 @@
             </div>
         @endforelse
     </div>
-    <div class="mt-8 flex justify-center">
-        <nav class="flex items-center space-x-2">
-            <a href="#"
-                class="px-3 py-2 rounded border border-gray-300 text-gray-700 hover:bg-gray-50">Previous</a>
-            <a href="#" class="px-3 py-2 rounded border border-gray-300 bg-gray-800 text-white">1</a>
-            <a href="#" class="px-3 py-2 rounded border border-gray-300 text-gray-700 hover:bg-gray-50">2</a>
-            <a href="#" class="px-3 py-2 rounded border border-gray-300 text-gray-700 hover:bg-gray-50">3</a>
-            <a href="#" class="px-3 py-2 rounded border border-gray-300 text-gray-700 hover:bg-gray-50">Next</a>
-        </nav>
+
+    <div class="mb-2">
+        {{ $posts->links() }}
     </div>
 </x-layout>
