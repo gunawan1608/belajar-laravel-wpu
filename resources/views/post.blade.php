@@ -15,8 +15,7 @@
                 <h1 class="text-3xl font-bold mb-4">{{ $post->title }}</h1>
                 <div class="flex items-center mb-6">
                     <div class="w-10 h-10 rounded-full bg-gray-300 overflow-hidden mr-3">
-                        <img src="{{ $post->author_image }}"
-                            alt="Author avatar" class="w-full h-full object-cover">
+                        <img src="{{ $post->author_image }}" alt="Author avatar" class="w-full h-full object-cover">
                     </div>
                     <div>
                         <div class="font-medium">{{ $post->author->name }}</div>
@@ -33,9 +32,10 @@
                 <p class="leading-[1.5]">{{ $post->body }}</p>
             </div>
             <div class="mt-8 flex flex-wrap">
-                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Technology</span>
-                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Programming</span>
-                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Web Development</span>
+                <div class="flex items-center space-x-4">
+                    <a href="/posts?category={{ $post->category->slug }}"
+                        class="bg-gray-200 text-gray-800 text-xs py-1 px-3 rounded-full hover:bg-gray-800 hover:text-white">{{ $post->category->tags }}</a>
+                </div>
             </div>
             <div class="mt-10 pt-6 border-t border-gray-200">
                 <div class="flex items-center justify-between">

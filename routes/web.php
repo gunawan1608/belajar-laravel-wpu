@@ -25,13 +25,12 @@ Route::get('/contact', function () {
     ]);
 });
 
-Route::get('/posts', function () {
-    // $posts = Post::with(['author', 'category'])->latest()->get();
-    $posts = Post::latest()->get();
-    return view('posts', [
-        'title' => 'Article', 'posts' => $posts
-    ]);
-});
+    Route::get('/posts', function () {
+
+        return view('posts', [
+            'title' => 'Article', 'posts' => Post::filter(request(['search', 'category', 'author']))->latest()->get()
+        ]);
+    });
 
 Route::get('/posts/{post:slug}', function(Post $post){
     return view('post', [
