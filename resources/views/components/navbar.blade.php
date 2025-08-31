@@ -93,8 +93,8 @@
                         alt="" />
                 </div>
                 <div class="ml-3">
-                    <div class="text-base font-medium leading-none text-white">Tom Cook</div>
-                    <div class="text-sm font-medium leading-none text-gray-400">tom@example.com</div>
+                    <div class="text-base font-medium leading-none text-white">Gunawan Madia Pratama</div>
+                    <div class="text-sm font-medium leading-none text-gray-400">tamagunawan08@gmail.com</div>
                 </div>
             </div>
             <div class="mt-3 space-y-1 px-2">
